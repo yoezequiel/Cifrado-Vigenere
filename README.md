@@ -17,5 +17,3 @@ Si se selecciona cifrar (`C`), se solicitará al usuario que ingrese el texto a 
 Si se selecciona descifrar (`D`), se solicitará al usuario que ingrese el texto a descifrar y la clave. A continuación, se generará el texto descifrado y se mostrará en la pantalla.
 
 Si se elige una opción inválida, se mostrará un mensaje de error.
-
-¡Disfruta cifrando y descifrando con el cifrador Vigenère!
