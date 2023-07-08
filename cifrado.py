@@ -26,12 +26,25 @@ def decrypt_vigenere(encrypted_text, key):
             decrypted_text += char
     return decrypted_text
 
-# Ingreso del texto y la clave por parte del usuario
-plain_text = input("Ingrese el texto a cifrar: ")
-key = input("Ingrese la clave: ")
+def main():
+    print("Bienvenido al cifrador Vigenère")
+    option = input("Ingrese 'C' para cifrar o 'D' para descifrar: ")
 
-encrypted_text = encrypt_vigenere(plain_text, key)
-print("Texto cifrado:", encrypted_text)
+    if option.upper() == 'C':
+        plain_text = input("Ingrese el texto a cifrar: ")
+        key = input("Ingrese la clave: ")
 
-decrypted_text = decrypt_vigenere(encrypted_text, key)
-print("Texto descifrado:", decrypted_text)
+        encrypted_text = encrypt_vigenere(plain_text, key)
+        print("Texto cifrado:", encrypted_text)
+
+    elif option.upper() == 'D':
+        encrypted_text = input("Ingrese el texto a descifrar: ")
+        key = input("Ingrese la clave: ")
+
+        decrypted_text = decrypt_vigenere(encrypted_text, key)
+        print("Texto descifrado:", decrypted_text)
+
+    else:
+        print("Opción no válida. Por favor, ingrese 'C' o 'D'.")
+
+main()
